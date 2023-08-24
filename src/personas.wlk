@@ -49,12 +49,12 @@ object bruno {
 	 }
 }
 object ramiro {
-	var contractura
-	var pielGrasosa
-	method contractura() = contractura
+	var nivelContractura = 0
+	var pielGrasosa = false
+	method nivelContractura() = nivelContractura
 	method pielGrasosa() = pielGrasosa
 	method recibirMasaje(){
-		contractura -= 2
+		nivelContractura =0.max ( nivelContractura - 2 )
 		pielGrasosa = false
 	}
 	method recibirBanioDeVapor(){
@@ -65,10 +65,10 @@ object ramiro {
 	}
 	method bajaALaFosa() {
 		pielGrasosa = true
-		contractura += 1
+		nivelContractura += 1
 	}
 	method juegaPaddle() {
-		contractura += 3
+		nivelContractura += 3
 	}
 	method diaDeTrabajo(){
 		self.bajaALaFosa()
